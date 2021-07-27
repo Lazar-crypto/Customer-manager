@@ -17,7 +17,7 @@ public class CustomerServiceImpl implements CustomerService {
 	@Autowired
 	private CustomerDAO customerDAO;
 	
-	@Transactional //service layer defines transactions(starts transaction,gets objects and commits)
+	@Transactional //service layer defines transactions(starts transaction,gets objects and commits) - Spring AOP(Before and AfterReturning)
 	public List<Customer> getCustomers() {
 		
 		//delegate calls to dao
